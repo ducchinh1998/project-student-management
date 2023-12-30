@@ -61,7 +61,7 @@
                         id="getNumberOfCredits"
                     /><br />
 
-                    <label for="" style="margin-top: 5px;">Khoa</label>
+                    <label for="" style="margin-top: 5px;">Bộ môn</label>
 					<select id="getFacultyId" class="form-control select2" style="width: 100%; margin-top: 0px;">
 						@if(isset($faculties))
 							@foreach($faculties as $value)

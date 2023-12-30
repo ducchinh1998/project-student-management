@@ -35,7 +35,7 @@ User Detail
 						<label for="" style="margin-top: 10px;">Tên đăng nhập</label>
 						<input name="username" type="text" class="form-control" id="username" placeholder="Ví dụ : Phan Khánh Hưng" value="{{$user->username}}"><br>
 
-						<label for="" style="margin-top: 5px;">Khoa giảng dạy</label>
+						<label for="" style="margin-top: 5px;">Bộ môn - Phòng ban</label>
 						<select id="getFacultyId" class="form-control select2" style="width: 100%; margin-top: 0px;">
 							@if(isset($faculties))
 								@foreach($faculties as $value)

@@ -327,7 +327,7 @@
             </a>
             <ul class="treeview-menu">
               <li><a href="/admin/school-year"><i class="fa fa-calendar"></i> Năm học - Kì học </a></li>
-              <li><a href="/admin/faculty"><i class="fa fa-home"></i> Khoa</a></li>
+              <li><a href="/admin/faculty"><i class="fa fa-home"></i> Bộ môn - Phòng ban</a></li>
               <li><a href="/admin/class"><i class="fa fa-home"></i> Lớp chuyên ngành</a></li>
               <li><a href="/admin/credit-class"><i class="fa fa-home"></i>Lớp tín chỉ</a></li>
               <li><a href="/admin/subject"><i class="fa fa-book"></i>Môn học</a></li>
@@ -369,7 +369,7 @@
             </a>
             <ul class="treeview-menu">
               <li><a href="/admin/school-year"><i class="fa fa-calendar"></i>Năm học - Kì học </a></li>
-              <li><a href="/admin/faculty"><i class="fa fa-home"></i>Khoa</a></li>
+              <li><a href="/admin/faculty"><i class="fa fa-home"></i>Bộ môn - Phòng ban</a></li>
               <li><a href="/admin/class"><i class="fa fa-home"></i>Lớp chuyên ngành</a></li>
               <li><a href="/admin/credit-class"><i class="fa fa-home"></i>Lớp tín chỉ</a></li>
               <li><a href="/admin/subject"><i class="fa fa-book"></i>Môn học</a></li>

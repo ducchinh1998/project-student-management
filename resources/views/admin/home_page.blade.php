@@ -15,7 +15,7 @@ Trang chủ
 
 			<div class="info-box-content">
 				<span class="info-box-text">
-					<a href="/admin/faculty">Số lượng khoa</a></span>
+					<a href="/admin/faculty">Số lượng Bộ môn - Phòng ban</a></span>
 				<span class="info-box-number">
 					@if(count($faculities) >= 0)
 					{{count($faculities)}}

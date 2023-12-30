@@ -29,7 +29,7 @@ School Years List
 								<th class="col-sm-1 text-center">Tên lớp</th>
 								<th class="col-sm-1 text-center">Năm học</th>
 								<th class="col-sm-1 text-center">Môn học</th>
-								<th class="col-sm-1 text-center">Khoa</th>
+								<th class="col-sm-1 text-center">Bộ môn</th>
 								@if(Auth::guard('admin')->check() && Auth::guard('admin')->user()->position != 'Student')
 								<th class="col-sm-1 text-center">Xử lý điểm</th>
 								@endif

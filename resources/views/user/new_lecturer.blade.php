@@ -37,7 +37,7 @@ New Lecturer
 					<label for="" style="margin-top: 10px;">Mật khẩu</label>
 					<input name="password" type="password" class="form-control" id="password" placeholder="Mật khẩu"><br>
 
-					<label for="" style="margin-top: 10px;">Khoa giảng dạy</label>
+					<label for="" style="margin-top: 10px;">Bộ môn</label>
 					<select id="getFacultyId" class="form-control select2" style="width: 100%; margin-top: 0px;">
 						@if(isset($faculties))
 							@foreach($faculties as $value)

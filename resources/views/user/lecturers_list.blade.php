@@ -22,7 +22,7 @@ Users List
 					<table id="list-collaborators" class="table table-bordered table-striped" style="margin-top : 10px;">
 						<thead>
 							<tr>
-								<th class="col-sm-1 text-center">Khoa giảng dạy</th>
+								<th class="col-sm-1 text-center">Bộ môn</th>
 								<th class="col-sm-1 text-center">Chủ nhiệm lớp</th>
 								<th class="col-sm-1 text-center">Tên đăng nhập</th>
 								<th class="col-sm-1 text-center">Tên giảng viên</th>

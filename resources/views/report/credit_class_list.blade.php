@@ -21,7 +21,7 @@ School Years List
 						<thead>
 							<tr>
 								<th class="col-sm-1 text-center">Năm học</th>
-								<th class="col-sm-1 text-center">Khoa</th>
+								<th class="col-sm-1 text-center">Bộ môn</th>
 								<th class="col-sm-1 text-center">Mã lớp</th>
 								<th class="col-sm-1 text-center">Tên lớp</th>
 								<th class="col-sm-1 text-center">Môn học</th>

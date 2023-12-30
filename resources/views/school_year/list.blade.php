@@ -25,7 +25,7 @@ School Years List
 					<table id="list-data" class="table table-bordered table-striped" style="margin-top : 10px;">
 						<thead>
 							<tr>
-								<th class="col-sm-2 text-center">Id</th>
+								<th class="col-sm-2 text-center">STT</th>
 								<th class="col-sm-2 text-center">Năm học</th>
 								<th class="col-sm-2 text-center">Kì học</th>
 								<th class="col-sm-2 text-center">Thời điểm bắt đầu</th>
@@ -36,9 +36,9 @@ School Years List
 							</tr>
 						</thead>
 						<tbody>
-							@foreach ($data as $value)
+							@foreach ($data as $key => $value)
 							<tr>
-								<td class="col-sm-2 text-center">{{$value->id}}</td>
+								<td class="col-sm-2 text-center">{{$key+1}}</td>
 								<td class="col-sm-2 text-center">{{$value->name}}</td>
 								<td class="col-sm-2 text-center">{{$value->session}}</td>
 								<td class="col-sm-2 text-center">{{$value->start_time}}</td>

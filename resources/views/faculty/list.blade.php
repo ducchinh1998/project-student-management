@@ -13,7 +13,7 @@ School Years List
 		<div class="col-xs-12">
 			<div class="box">
 				<div class="box-header">
-					<h3 class="box-title">Danh sách khoa</h3>
+					<h3 class="box-title">Danh sách Bộ môn - Phòng ban</h3>
 				</div>
 				<!-- /.box-header -->
 				<div class="box-body">
@@ -26,7 +26,7 @@ School Years List
 						<thead>
 							<tr>
 								<th class="col-sm-2 text-center">STT</th>
-								<th class="col-sm-2 text-center">Tên khoa</th>
+								<th class="col-sm-2 text-center">Bộ môn</th>
 								<th class="col-sm-2 text-center">Mô tả</th>
 								@if(Auth::guard('admin')->check() && Auth::guard('admin')->user()->position == 'Administrators')
 								<th class="col-sm-2 text-center">Hành động</th>

@@ -24,7 +24,7 @@ users List
 					<table id="list-collaborators" class="table table-bordered table-striped" style="margin-top : 10px;">
 						<thead>
 							<tr>
-								<th class="col-sm-1 text-center">Khoa</th>
+								<th class="col-sm-1 text-center">Bộ môn</th>
 								<th class="col-sm-1 text-center">Lớp chuyên ngành</th>
 								<th class="col-sm-1 text-center">Tên sinh viên</th>
 								<th class="col-sm-1 text-center">Ảnh</th>

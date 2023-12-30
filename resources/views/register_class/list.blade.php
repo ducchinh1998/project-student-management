@@ -28,7 +28,7 @@ Register Class List
 							<tr>
 								<th class="col-sm-1 text-center">Mã lớp</th>
 								<th class="col-sm-2 text-center">Tên lớp</th>
-								<th class="col-sm-2 text-center">Khoa</th>
+								<th class="col-sm-2 text-center">Bộ môn</th>
 								<th class="col-sm-2 text-center">Sinh viên</th>
 								<th class="col-sm-1 text-center">Mã sinh viên</th>
 								<th class="col-sm-2 text-center">Thời điểm đăng ký</th>

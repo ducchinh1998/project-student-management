@@ -25,19 +25,19 @@ School Years List
 					<table id="list-data" class="table table-bordered table-striped" style="margin-top : 10px;">
 						<thead>
 							<tr>
-								<th class="col-sm-2 text-center">Id</th>
+								<th class="col-sm-2 text-center">STT</th>
 								<th class="col-sm-2 text-center">Tên lớp</th>
 								<th class="col-sm-2 text-center">Mô tả</th>
-								<th class="col-sm-2 text-center">Khoa</th>
+								<th class="col-sm-2 text-center">Bộ môn</th>
 								@if(Auth::guard('admin')->check() && Auth::guard('admin')->user()->position == 'Administrators')
 								<th class="col-sm-2 text-center">Hành động</th>
 								@endif
 							</tr>
 						</thead>
 						<tbody>
-							@foreach ($data as $value)
+							@foreach ($data as $key => $value)
 							<tr>
-								<td class="col-sm-2 text-center">{{$value->id}}</td>
+								<td class="col-sm-2 text-center">{{$key+1}}</td>
 								<td class="col-sm-2 text-center">{{$value->name}}</td>
 								<td class="col-sm-2 text-center">{{$value->description}}</td>
 								<td class="col-sm-2 text-center">{{$value->faculties->name}}</td>
