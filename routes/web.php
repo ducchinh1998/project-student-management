@@ -76,6 +76,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'CheckAdmin'], function () {
 	// point management
 	Route::resource('point', PointController::class);
 	Route::get('/statistical',[PointController::class,'statistical'])->name('statistical');
+	Route::post('/statistical-point-class',[PointController::class,'statisticalPointClass']);
 	Route::get('point/detail/{student_id}/{credit_class_id}',[PointController::class, 'find']);
 	Route::post('point/update/{student_id}/{credit_class_id}', [PointController::class, 'update']);
 

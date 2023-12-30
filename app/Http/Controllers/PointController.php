@@ -9,6 +9,7 @@ use App\Models\CreditClass;
 use App\Models\RegisterClass;
 use Validator;
 use PhpOffice\PhpSpreadsheet\IOFactory;
+use Log;
 
 class PointController extends Controller
 {
@@ -161,6 +162,80 @@ class PointController extends Controller
     }
 
     public function statistical(Request $request){
-        return view('statisticals.index');
+
+        $classes = CreditClass::all();
+
+        return view('statisticals.index', [
+            'classes' => $classes,
+        ]);
+    }
+
+    public function statisticalPointClass(Request $request) {
+        $data = $request->except('_token');
+
+        $point["bad"] = [];
+        $point["medium"] = [];
+        $point["good"] = [];
+        $point["better"] = [];
+
+        $students = RegisterClass::select("student_id", "credit_class_id", "avg_point")
+                            ->with(['students' => function($query) {
+                                $query->with(['account' => function($query2) {
+                                    $query2->select("id", "username", "code");
+                                }]);
+                            } , 'creditClass' => function($query) {
+                                $query->select("id", "name", "code");
+                            }])
+                            ->where("credit_class_id", $data['classId'])
+                            ->get();
+        
+        foreach ($students as $student) {
+            if(0 <= $student->avg_point && $student->avg_point < 5) {
+                array_push($point["bad"], $student->avg_point);
+            }else if(5 <= $student->avg_point && $student->avg_point <  6.5) {
+                array_push($point["medium"], $student->avg_point);
+            }else if(6.5 <= $student->avg_point && $student->avg_point < 8 ) {
+                array_push($point["good"], $student->avg_point);
+            }else {
+                array_push($point["better"], $student->avg_point);
+            }
+        }
+
+        $dataPoint = [
+            [
+                "rank" => "Yếu",
+                "point" => $this->avgPoint($point["bad"]),
+                "count" => count($point["bad"])
+            ],
+            [
+                "rank" => "Trung bình",
+                "point" => $this->avgPoint($point["medium"]),
+                "count" => count($point["medium"])
+            ],
+            [
+                "rank" => "Khá",
+                "point" => $this->avgPoint($point["good"]),
+                "count" => count($point["good"])
+            ],
+            [
+                "rank" => "Giỏi",
+                "point" => $this->avgPoint($point["better"]),
+                "count" => count($point["better"])
+            ]
+        ];
+
+        
+        return response()->json(["students" => $students, "dataPoint" => $dataPoint , "code" => 0], 200);
+    }
+
+    private function avgPoint($point) {
+        if(count($point) > 0) {
+            $arrPoint = array_filter($point);
+            $average = array_sum($arrPoint) == 0 ? 0 : array_sum($arrPoint)/count($arrPoint);
+
+            return round($average, 3);
+        }
+       
+        return 0;
     }
 }
