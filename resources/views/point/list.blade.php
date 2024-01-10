@@ -17,6 +17,10 @@ School Years List
 				</div>
 				<!-- /.box-header -->
 				<div class="box-body">
+					<div style="margin-bottom: 30px; margin-left: 10px">
+						<a href="/admin/export/point"
+							class="btn btn-danger btn-add">Export Excel</a>
+					</div>
 					<table id="list-data" class="table table-bordered table-striped" style="margin-top : 10px;">
 						<thead>
 							<tr>

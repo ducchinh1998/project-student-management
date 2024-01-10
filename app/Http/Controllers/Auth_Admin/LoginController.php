@@ -99,13 +99,13 @@ class LoginController extends Controller
 
         $instance = Auth::guard('admin')->user();
         if ($instance) {
-            $password = \DB::table('admins')->find($instance->id)->password;
+            $password = \DB::table('accounts')->find($instance->id)->password;
         } else {
             return redirect()->back();
         }
 
         if (Hash::check($old_pass, $password)) {
-            \DB::table('admins')->where('id', $id)->update(['password' => bcrypt($new_pass)]);
+            \DB::table('accounts')->where('id', $instance->id)->update(['password' => bcrypt($new_pass)]);
             Auth::guard('admin')->logout();
             return response()->json(['is' => 'success', 'complete' => 'Đổi mật khẩu thành công']);
         }

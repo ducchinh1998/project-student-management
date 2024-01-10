@@ -82,6 +82,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'CheckAdmin'], function () {
 
 	Route::get('import/point/{credit_class_id}',[PointController::class, 'viewImport']);
 	Route::post('/import/point', [PointController::class, 'import']);
+	Route::get('export/point', [PointController::class, 'export']);
 
 	// point management
 	Route::resource('student/point', StudentPointController::class);
